@@ -2,9 +2,11 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme @yield('clase_ocultar')">
   <div class="app-brand demo m-1 text-center">
     
-  <img src="/clinica_utpl/public/asset/img/favicon/utpl.png" alt="Logo UTPL" id="imagen_logo" class="img-fluid" width="150" height="auto">
-
-
+    @if (!file_exists("public/asset/empresa/".$this->BusinesData()[0]->logo))
+    <img src="{{$this->asset("img/lgo_clinica_default.jpg")}}" id="imagen_logo" style="width:180px;height:105px" >
+    @else 
+    <img src="{{$this->asset(isset($this->BusinesData()[0]->logo) ?"empresa/".$this->BusinesData()[0]->logo:"img/lgo_clinica_default.jpg")}}" id="imagen_logo" style="width:240px;height:91px" >
+    @endif
    
     <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
       <i class="bx bx-chevron-left bx-sm align-middle"></i>
