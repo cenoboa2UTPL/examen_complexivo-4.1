@@ -104,13 +104,8 @@
       <div class="container-fluid h-custom">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-md-9 col-lg-6 col-xl-5">
-            @if (isset($this->BusinesData()[0]->logo))
-                         @if (!file_exists("public/asset/empresa/".$this->BusinesData()[0]->logo))
-                         <img src="{{$this->asset("img/lgo_clinica_default.jpg")}}" id="imagen_logo"  class="img-fluid" >
-                         @else 
-                         <img src="{{$this->asset(isset($this->BusinesData()[0]->logo) ?"empresa/".$this->BusinesData()[0]->logo:"img/lgo_clinica_default.jpg")}}" id="imagen_logo" class="img-fluid" />
-                         @endif
-                         @endif
+          <img src="/clinica_utpl/public/asset/img/favicon/utpl.png" alt="Logo UTPL" id="imagen_logo" class="img-fluid">
+
           </div>
           <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
             <div>
